@@ -1,0 +1,522 @@
+{
+  "goa": {
+    "isDemo": true,
+    "weather": {
+      "temperature": 28,
+      "windspeed": 5,
+      "weathercode": 0,
+      "description": "Clear sky",
+      "icon": "☀️"
+    },
+    "tavilyData": {
+      "places": [
+        {
+          "title": "Top spot in Goa",
+          "content": "A gorgeous sight to behold.",
+          "url": "#"
+        },
+        {
+          "title": "Historic landmark",
+          "content": "Centuries of history.",
+          "url": "#"
+        }
+      ],
+      "hotels": [
+        {
+          "title": "Luxury Stay Goa",
+          "content": "5-star comfort.",
+          "url": "#"
+        },
+        {
+          "title": "Budget Inn",
+          "content": "Cheap and best.",
+          "url": "#"
+        }
+      ],
+      "restaurants": [
+        {
+          "title": "Fine Dining Goa",
+          "content": "Exquisite cuisine.",
+          "url": "#"
+        },
+        {
+          "title": "Street Food Hub",
+          "content": "Local flavors.",
+          "url": "#"
+        }
+      ]
+    },
+    "TripData": {
+      "location": "Goa",
+      "itinerary": [
+        {
+          "day": "Day 1",
+          "plan": [
+            {
+              "placeName": "Goa Central Square",
+              "placeDetails": "A bustling area to start your day.",
+              "timeToTravel": "1 Hour",
+              "ticketPricing": "Free"
+            }
+          ]
+        }
+      ],
+      "bestTimeToVisit": "October to March"
+    }
+  },
+  "manali": {
+    "isDemo": true,
+    "weather": {
+      "temperature": 27,
+      "windspeed": 7,
+      "weathercode": 0,
+      "description": "Clear sky",
+      "icon": "☀️"
+    },
+    "tavilyData": {
+      "places": [
+        {
+          "title": "Top spot in Manali",
+          "content": "A gorgeous sight to behold.",
+          "url": "#"
+        },
+        {
+          "title": "Historic landmark",
+          "content": "Centuries of history.",
+          "url": "#"
+        }
+      ],
+      "hotels": [
+        {
+          "title": "Luxury Stay Manali",
+          "content": "5-star comfort.",
+          "url": "#"
+        },
+        {
+          "title": "Budget Inn",
+          "content": "Cheap and best.",
+          "url": "#"
+        }
+      ],
+      "restaurants": [
+        {
+          "title": "Fine Dining Manali",
+          "content": "Exquisite cuisine.",
+          "url": "#"
+        },
+        {
+          "title": "Street Food Hub",
+          "content": "Local flavors.",
+          "url": "#"
+        }
+      ]
+    },
+    "TripData": {
+      "location": "Manali",
+      "itinerary": [
+        {
+          "day": "Day 1",
+          "plan": [
+            {
+              "placeName": "Manali Central Square",
+              "placeDetails": "A bustling area to start your day.",
+              "timeToTravel": "1 Hour",
+              "ticketPricing": "Free"
+            }
+          ]
+        }
+      ],
+      "bestTimeToVisit": "October to March"
+    }
+  },
+  "delhi": {
+    "isDemo": true,
+    "weather": {
+      "temperature": 29,
+      "windspeed": 4,
+      "weathercode": 0,
+      "description": "Clear sky",
+      "icon": "☀️"
+    },
+    "tavilyData": {
+      "places": [
+        {
+          "title": "Top spot in Delhi",
+          "content": "A gorgeous sight to behold.",
+          "url": "#"
+        },
+        {
+          "title": "Historic landmark",
+          "content": "Centuries of history.",
+          "url": "#"
+        }
+      ],
+      "hotels": [
+        {
+          "title": "Luxury Stay Delhi",
+          "content": "5-star comfort.",
+          "url": "#"
+        },
+        {
+          "title": "Budget Inn",
+          "content": "Cheap and best.",
+          "url": "#"
+        }
+      ],
+      "restaurants": [
+        {
+          "title": "Fine Dining Delhi",
+          "content": "Exquisite cuisine.",
+          "url": "#"
+        },
+        {
+          "title": "Street Food Hub",
+          "content": "Local flavors.",
+          "url": "#"
+        }
+      ]
+    },
+    "TripData": {
+      "location": "Delhi",
+      "itinerary": [
+        {
+          "day": "Day 1",
+          "plan": [
+            {
+              "placeName": "Delhi Central Square",
+              "placeDetails": "A bustling area to start your day.",
+              "timeToTravel": "1 Hour",
+              "ticketPricing": "Free"
+            }
+          ]
+        }
+      ],
+      "bestTimeToVisit": "October to March"
+    }
+  },
+  "mumbai": {
+    "isDemo": true,
+    "weather": {
+      "temperature": 27,
+      "windspeed": 12,
+      "weathercode": 0,
+      "description": "Clear sky",
+      "icon": "☀️"
+    },
+    "tavilyData": {
+      "places": [
+        {
+          "title": "Top spot in Mumbai",
+          "content": "A gorgeous sight to behold.",
+          "url": "#"
+        },
+        {
+          "title": "Historic landmark",
+          "content": "Centuries of history.",
+          "url": "#"
+        }
+      ],
+      "hotels": [
+        {
+          "title": "Luxury Stay Mumbai",
+          "content": "5-star comfort.",
+          "url": "#"
+        },
+        {
+          "title": "Budget Inn",
+          "content": "Cheap and best.",
+          "url": "#"
+        }
+      ],
+      "restaurants": [
+        {
+          "title": "Fine Dining Mumbai",
+          "content": "Exquisite cuisine.",
+          "url": "#"
+        },
+        {
+          "title": "Street Food Hub",
+          "content": "Local flavors.",
+          "url": "#"
+        }
+      ]
+    },
+    "TripData": {
+      "location": "Mumbai",
+      "itinerary": [
+        {
+          "day": "Day 1",
+          "plan": [
+            {
+              "placeName": "Mumbai Central Square",
+              "placeDetails": "A bustling area to start your day.",
+              "timeToTravel": "1 Hour",
+              "ticketPricing": "Free"
+            }
+          ]
+        }
+      ],
+      "bestTimeToVisit": "October to March"
+    }
+  },
+  "dubai": {
+    "isDemo": true,
+    "weather": {
+      "temperature": 25,
+      "windspeed": 0,
+      "weathercode": 0,
+      "description": "Clear sky",
+      "icon": "☀️"
+    },
+    "tavilyData": {
+      "places": [
+        {
+          "title": "Top spot in Dubai",
+          "content": "A gorgeous sight to behold.",
+          "url": "#"
+        },
+        {
+          "title": "Historic landmark",
+          "content": "Centuries of history.",
+          "url": "#"
+        }
+      ],
+      "hotels": [
+        {
+          "title": "Luxury Stay Dubai",
+          "content": "5-star comfort.",
+          "url": "#"
+        },
+        {
+          "title": "Budget Inn",
+          "content": "Cheap and best.",
+          "url": "#"
+        }
+      ],
+      "restaurants": [
+        {
+          "title": "Fine Dining Dubai",
+          "content": "Exquisite cuisine.",
+          "url": "#"
+        },
+        {
+          "title": "Street Food Hub",
+          "content": "Local flavors.",
+          "url": "#"
+        }
+      ]
+    },
+    "TripData": {
+      "location": "Dubai",
+      "itinerary": [
+        {
+          "day": "Day 1",
+          "plan": [
+            {
+              "placeName": "Dubai Central Square",
+              "placeDetails": "A bustling area to start your day.",
+              "timeToTravel": "1 Hour",
+              "ticketPricing": "Free"
+            }
+          ]
+        }
+      ],
+      "bestTimeToVisit": "October to March"
+    }
+  },
+  "paris": {
+    "isDemo": true,
+    "weather": {
+      "temperature": 27,
+      "windspeed": 8,
+      "weathercode": 0,
+      "description": "Clear sky",
+      "icon": "☀️"
+    },
+    "tavilyData": {
+      "places": [
+        {
+          "title": "Top spot in Paris",
+          "content": "A gorgeous sight to behold.",
+          "url": "#"
+        },
+        {
+          "title": "Historic landmark",
+          "content": "Centuries of history.",
+          "url": "#"
+        }
+      ],
+      "hotels": [
+        {
+          "title": "Luxury Stay Paris",
+          "content": "5-star comfort.",
+          "url": "#"
+        },
+        {
+          "title": "Budget Inn",
+          "content": "Cheap and best.",
+          "url": "#"
+        }
+      ],
+      "restaurants": [
+        {
+          "title": "Fine Dining Paris",
+          "content": "Exquisite cuisine.",
+          "url": "#"
+        },
+        {
+          "title": "Street Food Hub",
+          "content": "Local flavors.",
+          "url": "#"
+        }
+      ]
+    },
+    "TripData": {
+      "location": "Paris",
+      "itinerary": [
+        {
+          "day": "Day 1",
+          "plan": [
+            {
+              "placeName": "Paris Central Square",
+              "placeDetails": "A bustling area to start your day.",
+              "timeToTravel": "1 Hour",
+              "ticketPricing": "Free"
+            }
+          ]
+        }
+      ],
+      "bestTimeToVisit": "October to March"
+    }
+  },
+  "tokyo": {
+    "isDemo": true,
+    "weather": {
+      "temperature": 20,
+      "windspeed": 0,
+      "weathercode": 0,
+      "description": "Clear sky",
+      "icon": "☀️"
+    },
+    "tavilyData": {
+      "places": [
+        {
+          "title": "Top spot in Tokyo",
+          "content": "A gorgeous sight to behold.",
+          "url": "#"
+        },
+        {
+          "title": "Historic landmark",
+          "content": "Centuries of history.",
+          "url": "#"
+        }
+      ],
+      "hotels": [
+        {
+          "title": "Luxury Stay Tokyo",
+          "content": "5-star comfort.",
+          "url": "#"
+        },
+        {
+          "title": "Budget Inn",
+          "content": "Cheap and best.",
+          "url": "#"
+        }
+      ],
+      "restaurants": [
+        {
+          "title": "Fine Dining Tokyo",
+          "content": "Exquisite cuisine.",
+          "url": "#"
+        },
+        {
+          "title": "Street Food Hub",
+          "content": "Local flavors.",
+          "url": "#"
+        }
+      ]
+    },
+    "TripData": {
+      "location": "Tokyo",
+      "itinerary": [
+        {
+          "day": "Day 1",
+          "plan": [
+            {
+              "placeName": "Tokyo Central Square",
+              "placeDetails": "A bustling area to start your day.",
+              "timeToTravel": "1 Hour",
+              "ticketPricing": "Free"
+            }
+          ]
+        }
+      ],
+      "bestTimeToVisit": "October to March"
+    }
+  },
+  "jaipur": {
+    "isDemo": true,
+    "weather": {
+      "temperature": 23,
+      "windspeed": 0,
+      "weathercode": 0,
+      "description": "Clear sky",
+      "icon": "☀️"
+    },
+    "tavilyData": {
+      "places": [
+        {
+          "title": "Top spot in Jaipur",
+          "content": "A gorgeous sight to behold.",
+          "url": "#"
+        },
+        {
+          "title": "Historic landmark",
+          "content": "Centuries of history.",
+          "url": "#"
+        }
+      ],
+      "hotels": [
+        {
+          "title": "Luxury Stay Jaipur",
+          "content": "5-star comfort.",
+          "url": "#"
+        },
+        {
+          "title": "Budget Inn",
+          "content": "Cheap and best.",
+          "url": "#"
+        }
+      ],
+      "restaurants": [
+        {
+          "title": "Fine Dining Jaipur",
+          "content": "Exquisite cuisine.",
+          "url": "#"
+        },
+        {
+          "title": "Street Food Hub",
+          "content": "Local flavors.",
+          "url": "#"
+        }
+      ]
+    },
+    "TripData": {
+      "location": "Jaipur",
+      "itinerary": [
+        {
+          "day": "Day 1",
+          "plan": [
+            {
+              "placeName": "Jaipur Central Square",
+              "placeDetails": "A bustling area to start your day.",
+              "timeToTravel": "1 Hour",
+              "ticketPricing": "Free"
+            }
+          ]
+        }
+      ],
+      "bestTimeToVisit": "October to March"
+    }
+  }
+}

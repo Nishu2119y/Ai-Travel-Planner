@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Premium Hover Effects ────────────────────────────────── */
+.travel-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.travel-card:hover {
+  transform: translateY(-8px) scale(1.05) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 77, 0, 0.2) !important;
+  border-color: rgba(255, 77, 0, 0.4) !important;
+}
+
+.btn-primary {
+  transition: all 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 0 25px rgba(255, 77, 0, 0.4) !important;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+
+.btn-primary:hover::after {
+  left: 100%;
+}
+
+/* Eco Section Progress Ring */
+@keyframes progress-load {
+  from { stroke-dashoffset: 100; }
+  to { stroke-dashoffset: var(--offset); }
+}
+
+.progress-ring-gradient {
+  stroke: url(#eco-gradient);
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+/* Visual Autocomplete Trending List */
+.trending-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.trending-item:hover {
+  background: rgba(255, 77, 0, 0.1);
+  transform: translateX(4px);
+}
+
+/* ─── Design Tokens ─────────────────────────────────────────── */
+:root {
+  --dark:        #020617; /* Deep Slate Navy */
+  --surface:     #0f172a; /* Sophisticated Card Base */
+  --orange:      #f97316; /* Vibrant Amber */
+  --orange-light:#fb923c;
+  --orange-dark: #ea580c;
+  --blue:        #3b82f6; /* Professional Azure */
+  --teal:        #10b981; /* Emerald/Teal Accent */
+  --cream:       #f8fafc; /* Clean Snow White */
+  --text-muted:  rgba(248, 250, 252, 0.5);
+  --text-light:  rgba(248, 250, 252, 0.9);
+  --glass-bg:    rgba(15, 23, 42, 0.4);
+  --glass-border: rgba(59, 130, 246, 0.15);
+  --midnight:    #030712;
+
+  /* Shadcn compat tokens */
+  --background: 222 47% 4%;
+  --foreground: 210 40% 98%;
+  --card: 222 47% 8%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222 47% 4%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 224.3 76.3% 48%;
+  --radius: 0.75rem;
+}
+
+/* ─── Global Base ──────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+html {
+  background-color: var(--dark);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--cream);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Typography ──────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  color: var(--cream);
+  line-height: 1.1;
+}
+
+.font-display {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.font-heading {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-label {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.text-gradient-teal {
+  background: linear-gradient(135deg, var(--midnight), #2a2a4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Glassmorphism ───────────────────────────────────────── */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+}
+
+.glass-card-dark {
+  background: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 77, 0, 0.2);
+  border-radius: 12px;
+}
+
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+/* ─── Orange Shimmer / Gradient Text ─────────────────────── */
+/* ─── Skeleton Loading ────────────────────────────────────── */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.02) 25%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0.02) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 2s infinite ease-in-out;
+  border-radius: 8px;
+}
+
+@keyframes skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ─── Shimmer Text ────────────────────────────────────────── */
+@keyframes shimmer {
+  to { background-position: 200% center; }
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #ff4d00 0%,
+    #f5f0e8 50%,
+    #ff4d00 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ─── Accent Line ─────────────────────────────────────────── */
+.accent-line {
+  height: 3px;
+  background: linear-gradient(90deg, var(--orange), var(--orange-light), transparent);
+  border-radius: 2px;
+}
+
+.accent-line-center {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--orange), var(--orange-light), var(--orange), transparent);
+  border-radius: 2px;
+}
+
+/* ─── Deco Line (kept for footer compat) ──────────────────── */
+.deco-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(216, 83, 42, 0.4), transparent);
+}
+
+/* ─── Card Hover States ───────────────────────────────────── */
+.travel-card {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.travel-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 24px 48px rgba(15, 20, 26, 0.55),
+    0 0 0 1px rgba(216, 83, 42, 0.3);
+}
+
+.travel-card-img {
+  transition: transform 0.5s ease;
+}
+
+.travel-card:hover .travel-card-img {
+  transform: scale(1.06);
+}
+
+/* ─── Buttons ─────────────────────────────────────────────── */
+.btn-primary {
+  background-color: var(--orange);
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  border: 2px solid var(--orange);
+  border-radius: 6px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary:hover {
+  background-color: var(--orange-light);
+  border-color: var(--orange-light);
+  box-shadow: 0 0 24px rgba(216, 83, 42, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--cream);
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  border: 2px solid rgba(245, 240, 232, 0.35);
+  border-radius: 6px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-outline:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+  box-shadow: 0 0 18px rgba(216, 83, 42, 0.2);
+  transform: translateY(-1px);
+}
+
+.btn-orange-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--orange);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.btn-orange-circle:hover {
+  background: var(--orange-light);
+  box-shadow: 0 0 28px rgba(216, 83, 42, 0.5);
+  transform: scale(1.08);
+}
+
+/* Legacy buttons kept for backward compat with Create Trip page */
+.btn-fuchsia {
+  background-color: var(--orange);
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  border: 2px solid var(--orange);
+  border-radius: 6px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-fuchsia:hover {
+  background-color: var(--orange-light);
+  border-color: var(--orange-light);
+  box-shadow: 0 0 24px rgba(216, 83, 42, 0.45);
+}
+
+.btn-turquoise {
+  background-color: transparent;
+  color: var(--cream);
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  border: 2px solid rgba(245, 240, 232, 0.4);
+  border-radius: 6px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-turquoise:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+/* ─── Search Bar Specific ─────────────────────────────────── */
+.search-bar-container {
+  background: rgba(15, 20, 26, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(216, 83, 42, 0.3);
+  border-radius: 100px;
+  padding: 8px 8px 8px 24px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.search-field {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--cream);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  padding: 8px 16px;
+  outline: none;
+}
+
+.search-field::placeholder {
+  color: var(--text-muted);
+}
+
+.search-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(245, 240, 232, 0.15);
+  flex-shrink: 0;
+}
+
+/* ─── Tag / Chip ──────────────────────────────────────────── */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.tag-orange {
+  background: rgba(216, 83, 42, 0.2);
+  border: 1px solid rgba(216, 83, 42, 0.4);
+  color: #f0874a;
+}
+
+.tag-teal {
+  background: rgba(27, 59, 66, 0.6);
+  border: 1px solid rgba(27, 59, 66, 0.9);
+  color: #5db8c8;
+}
+
+/* ─── Rating Stars ────────────────────────────────────────── */
+.star-filled { color: #f0a330; }
+.star-empty  { color: rgba(245, 240, 232, 0.25); }
+
+/* ─── Section Headings ────────────────────────────────────── */
+.section-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--orange);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-label::before,
+.section-label::after {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--orange);
+  border-radius: 1px;
+}
+
+.section-label-left::before { display: none; }
+
+/* ─── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--orange), var(--teal));
+  border-radius: 3px;
+}
+
+/* ─── Input Styling (forms) ───────────────────────────────── */
+.input-dark {
+  background: rgba(15, 20, 26, 0.6);
+  border: 1px solid rgba(245, 240, 232, 0.12);
+  border-radius: 8px;
+  color: var(--cream);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  padding: 12px 16px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-dark::placeholder { color: var(--text-muted); }
+.input-dark:focus { border-color: var(--orange); }
+
+/* ─── Social Icons ────────────────────────────────────────── */
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid rgba(216, 83, 42, 0.3);
+  color: var(--orange);
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 16px rgba(216, 83, 42, 0.35);
+}
+
+/* ─── Logo Line (header) ──────────────────────────────────── */
+.logo-line {
+  width: 16px;
+  height: 2px;
+  background: var(--orange);
+  border-radius: 1px;
+}
+
+/* ─── Shimmer Loading Skeleton ────────────────────────────── */
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 0.8; }
+}
+
+.skeleton {
+  background: rgba(27, 59, 66, 0.4);
+  border-radius: 8px;
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+/* ─── Fade-in Utility ─────────────────────────────────────── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fade-up 0.6s ease forwards;
+}
+
+/* ─── Mobile Fix ──────────────────────────────────────────── */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.7) sepia(1) saturate(3) hue-rotate(330deg);
+  cursor: pointer;
+}
+/* ─── Blur-Up Loading Optimization ────────────────────────── */
+.blur-load {
+  filter: blur(20px);
+  clip-path: inset(0);
+  transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blur-load.loaded {
+  filter: blur(0);
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
