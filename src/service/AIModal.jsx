@@ -1,8 +1,4 @@
-// Groq API integration (replaces Google Gemini)
-// Groq uses an OpenAI-compatible API, so we call it via fetch.
-
-const GROQ_API_KEY = import.meta.env.VITE_GROQ_API_KEY;
-if (!GROQ_API_KEY) throw new Error('VITE_GROQ_API_KEY not found in environment. Please add it to your .env file.');
+const GROQ_API_KEY = import.meta.env.VITE_GROQ_API_KEY || '';
 
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
 
@@ -62,6 +58,9 @@ const isQuotaError = (error) => {
  * @returns {Promise<string>} - The assistant's response text
  */
 const callGroq = async (messages, options = {}) => {
+  if (!GROQ_API_KEY) {
+    throw new Error('VITE_GROQ_API_KEY is not set in environment.');
+  }
   const { temperature = 0.7, max_tokens = 4096, response_format } = options;
 
   for (let modelIdx = 0; modelIdx < MODEL_CHAIN.length; modelIdx++) {
@@ -267,8 +266,7 @@ Enjoy your trip to Las Vegas!`,
 
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-// Initialize Gemini
-const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY || import.meta.env.VITE_GOOGLE_PLACE_API_KEY; 
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY || import.meta.env.VITE_GOOGLE_PLACE_API_KEY || 'dummy-key'; 
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 const geminiModel = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
