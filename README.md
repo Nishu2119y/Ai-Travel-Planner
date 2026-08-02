@@ -1,6 +1,10 @@
-# AI Travel Planner 🌍✈️
+# TripGenie - AI Travel Planner 🌍✈️
 
 An intelligent travel planning application that uses AI to create personalized trip itineraries based on your preferences, budget, and travel dates.
+
+## 🚀 Live Demo
+
+- **GitHub Repository**: [Nishu2119y/Ai-Travel-Planner](https://github.com/Nishu2119y/Ai-Travel-Planner)
 
 ## Features
 
@@ -35,8 +39,8 @@ An intelligent travel planning application that uses AI to create personalized t
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/abhishekpgrm/Ai-travel-planner.git
-cd Ai-travel-planner
+git clone https://github.com/Nishu2119y/Ai-Travel-Planner.git
+cd Ai-Travel-Planner
 ```
 
 2. Install dependencies:
