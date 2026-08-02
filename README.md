@@ -1,13 +1,13 @@
 # TripGenie - AI Travel Planner 🌍✈️
 
-[![Live Demo](https://img.shields.io/badge/Vercel-Live_Demo-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-travel-planner-nishu2119y.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Vercel-Live_Demo-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-travel-planner-weld-rho.vercel.app)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Nishu2119y/Ai-Travel-Planner)
 
 An intelligent travel planning application that uses AI to create personalized trip itineraries based on your preferences, budget, and travel dates.
 
 ## 🚀 Live Demo
 
-- 🌐 **Live Web Application**: [https://ai-travel-planner-nishu2119y.vercel.app](https://ai-travel-planner-nishu2119y.vercel.app)
+- 🌐 **Live Web Application**: [https://ai-travel-planner-weld-rho.vercel.app](https://ai-travel-planner-weld-rho.vercel.app)
 - 📦 **GitHub Repository**: [https://github.com/Nishu2119y/Ai-Travel-Planner](https://github.com/Nishu2119y/Ai-Travel-Planner)
 
 ## Features
